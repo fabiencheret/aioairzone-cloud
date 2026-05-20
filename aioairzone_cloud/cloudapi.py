@@ -235,8 +235,15 @@ class AirzoneCloudApi:
         inst_id = device.get_installation()
         url_id = urllib.parse.quote(dev_id)
 
+        inst = self.get_installation_id(inst_id)
+        if inst is not None:
+            request_type = inst.get_request_type()
+        else:
+            request_type = API_TYPE_USER
+
         params = {
             API_INSTALLATION_ID: inst_id,
+            API_TYPE: request_type,
         }
         dev_params = urllib.parse.urlencode(params)
 
