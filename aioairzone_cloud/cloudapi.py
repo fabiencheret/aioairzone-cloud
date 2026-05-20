@@ -18,7 +18,6 @@ from aiohttp import (
 
 from .aidoo import Aidoo
 from .air_quality import AirQuality
-from .energy_clamp import EnergyClamp
 from .common import ConnectionOptions, OperationMode
 from .const import (
     API_AUTH_LOGIN,
@@ -78,6 +77,7 @@ from .const import (
     REQUESTS_LIMIT,
 )
 from .device import Device
+from .energy_clamp import EnergyClamp
 from .entity import EntityUpdate, UpdateType
 from .exceptions import (
     AirzoneCloudError,
